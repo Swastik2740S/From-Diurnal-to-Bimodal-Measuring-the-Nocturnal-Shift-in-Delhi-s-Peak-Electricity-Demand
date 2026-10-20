@@ -1,0 +1,6 @@
+arm,mean_R2,sd_R2
+MAGNITUDE: nocturnal predictors (Tmin),0.8896,0.0136
+MAGNITUDE: daytime predictors (Tmax),0.8548,0.0373
+TIMING: nocturnal predictors (AUC),0.7641,0.0379
+TIMING: daytime predictors (AUC),0.7307,0.0458
+TIMING: weekend only (AUC),0.6354,0.0289

@@ -1,0 +1,9 @@
+specification,variable,VIF
+uncentred,CDD,26.46
+uncentred,Tmin_sq,40.98
+uncentred,humidity,8.77
+uncentred,heat_x_humid_raw,48.8
+centred,CDD,37.11
+centred,Tmin_sq,40.98
+centred,humidity_centered,8.77
+centred,heat_x_humid_centered,6.94

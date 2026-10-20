@@ -1,0 +1,4 @@
+specification,n_months,mean_R2,sd_R2,min_R2
+exclude_covid_years,128,0.8835,0.0119,0.869
+include_with_indicator,151,0.8443,0.105,0.6375
+include_no_indicator,151,0.8171,0.0965,0.6375

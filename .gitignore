@@ -1,0 +1,28 @@
+# Videos and video-production projects (not part of the research release)
+*.mp4
+*.mov
+*.webm
+*.mkv
+brag-output/
+claude-style-video/
+delhi-film/
+
+# Claude Code files
+CLAUDE.md
+.claude/
+
+# Published paper PDF (IEEE copyright). Cite it via DOI instead.
+2026317810.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS and Office temp files
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*

@@ -1,0 +1,202 @@
+daily record : 5,618 rows, 2010-03-29 to 2026-01-12
+cooling frame: 3,385 days with a peak timestamp
+
+==============================================================================
+ E1  WHERE THE PEAK ACTUALLY FALLS
+==============================================================================
+cooling-season days: 3,385
+  nocturnal 22:00-01:59 : 1,448   42.8%
+  afternoon 14:00-17:59 : 1,182   34.9%
+  neither               :   755   22.3%
+
+full histogram (this is the bimodality):
+  00:00    440   13.0%  ###########################
+  01:00      1    0.0%  
+  07:00      2    0.1%  
+  08:00      4    0.1%  
+  09:00      1    0.0%  
+  10:00     23    0.7%  #
+  11:00     67    2.0%  ####
+  12:00     65    1.9%  ####
+  13:00      2    0.1%  
+  14:00    100    3.0%  ######
+  15:00    974   28.8%  ############################################################
+  16:00    102    3.0%  ######
+  17:00      6    0.2%  
+  18:00    301    8.9%  ##################
+  19:00    277    8.2%  #################
+  20:00      7    0.2%  
+  21:00      6    0.2%  
+  22:00    368   10.9%  ######################
+  23:00    639   18.9%  #######################################
+
+inside the nocturnal window (n=1,448):
+  22:00-22:59    368   25.4%
+  23:00-23:59    639   44.1%
+  00:00-00:59    440   30.4%
+  01:00-01:59      1    0.1%
+  -> 1,447 of 1,448 fall between 22:00 and 00:59
+  -> exception: 2020-09-30 at 01:01
+
+==============================================================================
+ E2  THE SHIFT, BY ERA
+==============================================================================
+      era  n_days  nocturnal_pct  afternoon_pct  evening_pct  mean_tmin  mean_tmax  mean_humidity
+2010-2012     642           25.4           36.6         35.8      24.47      34.81           59.2
+2013-2016     855           39.4           38.0         19.4      24.46      34.73           58.7
+2017-2019     611           49.1           33.4         13.7      24.84      34.92           59.5
+2020-2022     635           61.9           22.0          7.4      24.75      34.91           61.4
+2023-2025     642           39.7           43.3         10.0      24.78      34.91           61.3
+
+read this two ways:
+  nocturnal rises 25.4 -> 39.7 across the full span, but peaks in 2020-2022
+  the EVENING band is what collapsed; afternoon did not give way to night
+  weather is flat across every era, so none of the movement is weather
+
+headline test, 2010-2012 against 2023-2025 (both sub-hourly instruments):
+  25.4% (n=642)  ->  39.7% (n=642)   z = 5.48, p = 4.271e-08
+
+==============================================================================
+ E3  SEASONALITY: WHEN DAYTIME PEAKS HAPPEN
+==============================================================================
+ month  n_days  nocturnal_pct  afternoon_pct  mean_tmin  mean_tmax  mean_humidity
+     4     474           19.6           39.7       21.6       36.3           36.0
+     5     494           52.8           44.5       25.5       39.2           38.2
+     6     449           50.8           47.7       28.1       38.7           50.6
+     7     496           55.6           41.9       26.8       33.5           76.5
+     8     496           62.7           29.8       26.1       32.3           79.9
+     9     480           47.3           31.5       24.7       32.5           74.8
+    10     496           10.5           10.7       20.0       31.8           62.2
+
+April and October peak in the afternoon: nights drop below the threshold
+July to September peak at night: humid heat keeps compressors running
+so it is not 'summer means night'. It is humid heat means night.
+
+==============================================================================
+ E4  THE POST-2022 FALL, UNDER FOUR BASELINES
+==============================================================================
+The answer depends on the baseline. Report all four, not the kindest one.
+           baseline    n  odds_ratio     z  p_value  significant_at_5pct
+all years 2010-2025 2963       0.917 -0.82   0.4106                False
+   2013-2019 pooled 2108       0.749 -2.57   0.0101                 True
+     2017-2019 only 1253       0.572 -4.12   0.0000                 True
+     2013-2016 only 1497       0.895 -0.90   0.3706                False
+
+2023-2025 is indistinguishable from 2013-2016 and clearly below 2017-2022.
+So the honest description is a bulge that receded, not a reversal of trend.
+
+==============================================================================
+ E5  IS THE FALL WEATHER, OR IS IT BEHAVIOUR?
+==============================================================================
+baseline_era  baseline_actual_pct  predicted_2023_25_pct  actual_2023_25_pct  due_to_weather_pts  due_to_response_pts
+   2017-2019                 49.1                   48.9                39.7                -0.2                 -9.2
+   2013-2016                 39.4                   39.9                39.7                 0.5                 -0.2
+
+Weather composition explains essentially none of it.
+Against 2013-2016 the model predicts 2023-2025 almost exactly,
+which is the cleanest statement: the system returned to its 2013-2016 regime.
+
+==============================================================================
+ E6  THE AVERAGE SUMMER DAY, THEN AND NOW
+==============================================================================
+Normalised so each day's mean load = 1.0, May to September.
+  2010-2012: 459 summer days
+  2023-2025: 459 summer days
+
+      2010-2012  2023-2025  change
+hour                              
+0         1.039      1.080   0.042
+1         0.988      1.019   0.031
+2         0.945      0.964   0.019
+3         0.906      0.916   0.010
+4         0.872      0.878   0.006
+5         0.845      0.849   0.004
+6         0.836      0.836   0.000
+7         0.835      0.831  -0.004
+8         0.852      0.839  -0.013
+9         0.927      0.905  -0.022
+10        1.007      0.986  -0.020
+11        1.043      1.029  -0.013
+12        1.061      1.056  -0.006
+13        1.049      1.052   0.003
+14        1.092      1.109   0.017
+15        1.110      1.132   0.022
+16        1.095      1.107   0.012
+17        1.061      1.068   0.008
+18        1.035      1.028  -0.008
+19        1.063      1.023  -0.039
+20        1.074      1.030  -0.044
+21        1.074      1.056  -0.018
+22        1.102      1.110   0.008
+23        1.090      1.129   0.038
+
+afternoon mode (15:00) vs night mode (23:00):
+  2010-2012 gap = +0.019
+  2023-2025 gap = +0.003   <- the two modes are now level
+evening 19:00-20:00 is what fell away; afternoon and night both rose.
+
+==============================================================================
+ E7  HOW OFTEN IS IT A COIN FLIP?
+==============================================================================
+Per summer day: afternoon maximum minus night maximum, as % of daily mean.
+      era  n_days  median_gap_pct  tie_within_2pct  afternoon_wins_pct  night_wins_pct
+2010-2012     459            1.61             28.8                64.1            35.9
+2023-2025     455            0.29             33.4                54.3            45.3
+
+This is the whole explanation for the era swings. When the median gap is
+0.3% of daily mean, a third of days are effectively tied, so the nocturnal
+share moves 10 points on a nudge with no structural change at all.
+
+==============================================================================
+ E8  WHAT CDD, Tmin^2 AND HUMIDITY ACTUALLY DO
+==============================================================================
+                         coef      z    p
+const                  8.8541   7.78  0.0
+CDD                    2.5475  11.87  0.0
+humidity_centered     -0.0401  -5.73  0.0
+heat_x_humid_centered  0.0058   6.41  0.0
+is_weekend             1.7404  18.17  0.0
+Tmin_sq               -0.0436 -10.44  0.0
+
+P(nocturnal) against Tmin, weekday, humidity at its mean:
+  Tmin 20 C ->   3.0%
+  Tmin 22 C ->  11.6%
+  Tmin 24 C ->  28.0%
+  Tmin 26 C ->  44.8%
+  Tmin 28 C ->  54.6%
+  Tmin 30 C ->  55.7%
+  Tmin 32 C ->  48.0%
+  Tmin 34 C ->  32.5%
+
+  turning point: 29.2 C. Above this, MORE heat means FEWER night
+  peaks, because the afternoon grows faster than the night does.
+
+humidity changes sign at CDD = 6.9, that is Tmin = 24.9 C:
+  Tmin 22 C: +10 points of RH moves P(nocturnal) by -1.6 points
+  Tmin 24 C: +10 points of RH moves P(nocturnal) by -1.1 points
+  Tmin 28 C: +10 points of RH moves P(nocturnal) by +4.4 points
+  Tmin 32 C: +10 points of RH moves P(nocturnal) by +10.1 points
+
+  mild and humid = cloudy, which damps the afternoon too
+  hot and humid  = latent load, the compressor cannot stop. Monsoon nights.
+
+==============================================================================
+ E9  THE RESPONSE ITSELF HAS STEEPENED
+==============================================================================
+breakpoint held fixed at 21.5 C, HC3 standard errors
+
+      era   n  mean_peak_mw  slope_below  slope_above  ci_low  ci_high  pct_of_mean_per_degC
+2010-2012 642          3959         70.9        140.0   130.2    149.8                  3.54
+2013-2016 855          4597        137.9        186.7   171.5    201.9                  4.06
+2017-2019 611          5176        116.1        295.6   282.3    309.0                  5.71
+2023-2025 642          5866        162.4        353.2   335.8    370.6                  6.02
+
+  absolute   140.0 -> 353.2 MW/C (2.52x)
+  normalised 3.54 -> 6.02 %/C (1.70x)
+  the normalised column is the one that matters: a bigger grid alone
+  would move the absolute slope without any change in behaviour.
+
+==============================================================================
+ DONE
+==============================================================================
+tables written to E:\Delhi electricity demand IEEE paper\results\paper_evidence

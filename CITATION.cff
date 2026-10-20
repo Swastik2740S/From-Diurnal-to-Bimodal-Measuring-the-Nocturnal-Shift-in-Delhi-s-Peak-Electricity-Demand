@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite the paper below."
+title: "From Diurnal to Bimodal: data and code"
+authors:
+  - family-names: Verma
+    given-names: Swastik
+    affiliation: "Chitkara University Institute of Engineering and Technology, Chitkara University"
+    email: onamverma8@gmail.com
+  - family-names: Dhiman
+    given-names: Pummy
+    affiliation: "Chitkara University Institute of Engineering and Technology, Chitkara University"
+    email: pummy.dhiman@chitkara.edu.in
+doi: 10.5281/zenodo.22296253
+license: MIT
+keywords:
+  - peak demand timing
+  - nocturnal load shift
+  - cooling degree days
+  - urban heat island
+  - battery energy storage
+  - Delhi
+preferred-citation:
+  type: conference-paper
+  title: "From Diurnal to Bimodal: Measuring the Nocturnal Shift in Delhi's Peak Electricity Demand from Daily Peak-Timing Records"
+  authors:
+    - family-names: Verma
+      given-names: Swastik
+    - family-names: Dhiman
+      given-names: Pummy
+  collection-title: "2026 4th IEEE International Conference on Industrial Electronics: Developments & Applications (ICIDeA)"
+  publisher:
+    name: IEEE
+  year: 2026
+  isbn: "979-8-3195-3464-4"

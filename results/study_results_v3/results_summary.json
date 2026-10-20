@@ -1,0 +1,404 @@
+{
+  "n_records": 5618,
+  "date_min": "2010-03-29",
+  "date_max": "2026-01-12",
+  "nocturnal_clock_mean": "23:23",
+  "nocturnal_ci_min": 1.6,
+  "rayleigh_Z": 1423.1,
+  "rayleigh_p": -0.0,
+  "weekend_odds_ratio": 3.99,
+  "weekday_nocturnal_pct": 33.3,
+  "weekend_nocturnal_pct": 66.6,
+  "era_trend_table": [
+    {
+      "label": "Pre-pandemic (2013-2019)",
+      "n": 1466,
+      "years": "2013-2019",
+      "beta_per_year": 0.1253595050945152,
+      "odds_ratio_per_year": 1.1335558989435917,
+      "odds_ratio_per_decade": 3.5029135005424794,
+      "p_value": 2.2161863402222225e-06,
+      "nocturnal_pct": 43.5
+    },
+    {
+      "label": "Disrupted (2020-2022)",
+      "n": 635,
+      "years": "2020-2022",
+      "beta_per_year": -0.34491638040075623,
+      "odds_ratio_per_year": 0.7082795770460246,
+      "odds_ratio_per_decade": 0.03177219305373013,
+      "p_value": 0.0006543568890194078,
+      "nocturnal_pct": 61.9
+    },
+    {
+      "label": "Recent (2023-2025)",
+      "n": 642,
+      "years": "2023-2025",
+      "beta_per_year": 0.04880170210041736,
+      "odds_ratio_per_year": 1.0500121148974249,
+      "odds_ratio_per_decade": 1.6290825783579563,
+      "p_value": 0.6213979828312681,
+      "nocturnal_pct": 39.7
+    },
+    {
+      "label": "Full span (2013-2025)",
+      "n": 2743,
+      "years": "2013-2025",
+      "beta_per_year": 0.027489155062731037,
+      "odds_ratio_per_year": 1.0278704678560626,
+      "odds_ratio_per_decade": 1.3163879056835597,
+      "p_value": 0.007040638271350783,
+      "nocturnal_pct": 46.8
+    }
+  ],
+  "era_z": 5.48,
+  "era_p": 4.2706744807219366e-08,
+  "reversal_baselines": [
+    {
+      "baseline": "all years 2010-2025",
+      "n": 2963,
+      "odds_ratio": 0.917,
+      "z": -0.82,
+      "p_value": 0.4106,
+      "significant_5pct": false
+    },
+    {
+      "baseline": "2013-2019 pooled",
+      "n": 2108,
+      "odds_ratio": 0.749,
+      "z": -2.57,
+      "p_value": 0.0101,
+      "significant_5pct": true
+    },
+    {
+      "baseline": "2017-2019 only",
+      "n": 1253,
+      "odds_ratio": 0.572,
+      "z": -4.12,
+      "p_value": 0.0,
+      "significant_5pct": true
+    },
+    {
+      "baseline": "2013-2016 only",
+      "n": 1497,
+      "odds_ratio": 0.895,
+      "z": -0.9,
+      "p_value": 0.3706,
+      "significant_5pct": false
+    }
+  ],
+  "balance_point_c": 14.0,
+  "threshold": {
+    "threshold_c": 21.5,
+    "ci_low": 21.25,
+    "ci_high": 22.5,
+    "slope_below": 131.34170901993423,
+    "slope_above": 291.77689307115605,
+    "claimed_28_inside_ci": false,
+    "mw_per_degree_above": 291.77689307115605
+  },
+  "era_sensitivity": [
+    {
+      "era": "2010-2012",
+      "n": 642,
+      "mean_peak_mw": 3959.0,
+      "slope_below": 70.9,
+      "slope_above": 140.0,
+      "ci_low": 130.2,
+      "ci_high": 149.8,
+      "pct_of_mean_per_degC": 3.54
+    },
+    {
+      "era": "2013-2016",
+      "n": 855,
+      "mean_peak_mw": 4597.0,
+      "slope_below": 137.9,
+      "slope_above": 186.7,
+      "ci_low": 171.5,
+      "ci_high": 201.9,
+      "pct_of_mean_per_degC": 4.06
+    },
+    {
+      "era": "2017-2019",
+      "n": 611,
+      "mean_peak_mw": 5176.0,
+      "slope_below": 116.1,
+      "slope_above": 295.6,
+      "ci_low": 282.3,
+      "ci_high": 309.0,
+      "pct_of_mean_per_degC": 5.71
+    },
+    {
+      "era": "2023-2025",
+      "n": 642,
+      "mean_peak_mw": 5866.0,
+      "slope_below": 162.4,
+      "slope_above": 353.2,
+      "ci_low": 335.8,
+      "ci_high": 370.6,
+      "pct_of_mean_per_degC": 6.02
+    }
+  ],
+  "era_sensitivity_test": {
+    "breakpoint_c": 21.5,
+    "slope_difference_mw_per_c": -91.41433089802665,
+    "z": -4.836425804497857,
+    "p_value": 1.3219458403837765e-06
+  },
+  "timing_auc_all_years": 0.7888,
+  "timing_auc_restricted": 0.7852,
+  "timing_cv": [
+    {
+      "model": "LogisticRegression",
+      "mean_AUC": 0.7774,
+      "sd_AUC": 0.0084,
+      "mean_accuracy": 0.6826,
+      "mean_Brier": 0.2028
+    },
+    {
+      "model": "RandomForest",
+      "mean_AUC": 0.7924,
+      "sd_AUC": 0.0306,
+      "mean_accuracy": 0.705,
+      "mean_Brier": 0.2015
+    },
+    {
+      "model": "Majority-class baseline",
+      "mean_AUC": 0.5,
+      "sd_AUC": 0.0,
+      "mean_accuracy": 0.5722,
+      "mean_Brier": NaN
+    }
+  ],
+  "timing_logit": [
+    {
+      "index": "const",
+      "coef": 8.8541,
+      "std_err": 1.1385,
+      "z": 7.7772,
+      "p_value": 0.0,
+      "odds_ratio": 7003.0741
+    },
+    {
+      "index": "CDD",
+      "coef": 2.5475,
+      "std_err": 0.2146,
+      "z": 11.8723,
+      "p_value": 0.0,
+      "odds_ratio": 12.7748
+    },
+    {
+      "index": "humidity_centered",
+      "coef": -0.0401,
+      "std_err": 0.007,
+      "z": -5.7292,
+      "p_value": 0.0,
+      "odds_ratio": 0.9607
+    },
+    {
+      "index": "heat_x_humid_centered",
+      "coef": 0.0058,
+      "std_err": 0.0009,
+      "z": 6.4119,
+      "p_value": 0.0,
+      "odds_ratio": 1.0058
+    },
+    {
+      "index": "is_weekend",
+      "coef": 1.7404,
+      "std_err": 0.0958,
+      "z": 18.1735,
+      "p_value": 0.0,
+      "odds_ratio": 5.6998
+    },
+    {
+      "index": "Tmin_sq",
+      "coef": -0.0436,
+      "std_err": 0.0042,
+      "z": -10.4443,
+      "p_value": 0.0,
+      "odds_ratio": 0.9574
+    }
+  ],
+  "magnitude_perf_main": [
+    {
+      "model": "RidgeCV",
+      "mean_R2": 0.8835,
+      "sd_R2": 0.0119,
+      "min_R2": 0.869,
+      "max_R2": 0.9009,
+      "mean_RMSE": 383.3136,
+      "mean_MAE": 311.2005,
+      "alpha_range": "0.0048939-0.853168"
+    },
+    {
+      "model": "LassoCV",
+      "mean_R2": 0.8572,
+      "sd_R2": 0.0443,
+      "min_R2": 0.772,
+      "max_R2": 0.8927,
+      "mean_RMSE": 416.8315,
+      "mean_MAE": 342.1514,
+      "alpha_range": "0.78663-22.0632"
+    },
+    {
+      "model": "ElasticNetCV",
+      "mean_R2": 0.432,
+      "sd_R2": 0.1874,
+      "min_R2": 0.2109,
+      "max_R2": 0.6558,
+      "mean_RMSE": 844.047,
+      "mean_MAE": 697.4918,
+      "alpha_range": "0.82685-1.71134"
+    },
+    {
+      "model": "OLS",
+      "mean_R2": 0.8785,
+      "sd_R2": 0.0187,
+      "min_R2": 0.8487,
+      "max_R2": 0.9024,
+      "mean_RMSE": 389.3119,
+      "mean_MAE": 317.9671,
+      "alpha_range": ""
+    },
+    {
+      "model": "RandomForest",
+      "mean_R2": 0.7549,
+      "sd_R2": 0.0306,
+      "min_R2": 0.7156,
+      "max_R2": 0.7925,
+      "mean_RMSE": 553.052,
+      "mean_MAE": 449.1026,
+      "alpha_range": ""
+    },
+    {
+      "model": "Seasonal-naive (t-12)",
+      "mean_R2": 0.8159,
+      "sd_R2": 0.0283,
+      "min_R2": 0.7815,
+      "max_R2": 0.8633,
+      "mean_RMSE": NaN,
+      "mean_MAE": NaN,
+      "alpha_range": ""
+    }
+  ],
+  "magnitude_vs_naive_main": 0.0676,
+  "corr_cdd_interaction_raw": 0.926,
+  "corr_cdd_interaction_centred": -0.059,
+  "prediction_interval": {
+    "n": 105,
+    "rmse": 388.2491239184368,
+    "shapiro_p": 0.27913161007977644,
+    "skew": 0.2910251837002253,
+    "empirical_lo": -698.1902996540696,
+    "empirical_hi": 782.6751786750968,
+    "coverage_of_pm_rmse": 69.52380952380952
+  },
+  "covid_sensitivity": [
+    {
+      "specification": "exclude_covid_years",
+      "n_months": 128,
+      "mean_R2": 0.8835,
+      "sd_R2": 0.0119,
+      "min_R2": 0.869
+    },
+    {
+      "specification": "include_with_indicator",
+      "n_months": 151,
+      "mean_R2": 0.8443,
+      "sd_R2": 0.105,
+      "min_R2": 0.6375
+    },
+    {
+      "specification": "include_no_indicator",
+      "n_months": 151,
+      "mean_R2": 0.8171,
+      "sd_R2": 0.0965,
+      "min_R2": 0.6375
+    }
+  ],
+  "n_2020_records": 334,
+  "lockdown_z": 5.25,
+  "lockdown_p": 1.540881346961953e-07,
+  "lockdown_pct": 83.5,
+  "lockdown_baseline_pct": 52.4,
+  "lockdown_monthly": [
+    {
+      "month": 4,
+      "n": 30,
+      "nocturnal_pct": 60.0
+    },
+    {
+      "month": 5,
+      "n": 31,
+      "nocturnal_pct": 96.8
+    },
+    {
+      "month": 6,
+      "n": 30,
+      "nocturnal_pct": 93.3
+    },
+    {
+      "month": 7,
+      "n": 31,
+      "nocturnal_pct": 77.4
+    },
+    {
+      "month": 8,
+      "n": 31,
+      "nocturnal_pct": 80.6
+    },
+    {
+      "month": 9,
+      "n": 30,
+      "nocturnal_pct": 93.3
+    },
+    {
+      "month": 10,
+      "n": 31,
+      "nocturnal_pct": 9.7
+    }
+  ],
+  "validation_2025": {
+    "r2": 0.8747133026896449,
+    "rmse": 463.56443678075516,
+    "mape": 6.477903000980985,
+    "n_test": 12
+  },
+  "ablation": [
+    {
+      "arm": "MAGNITUDE: nocturnal predictors (Tmin)",
+      "mean_R2": 0.8896,
+      "sd_R2": 0.0136
+    },
+    {
+      "arm": "MAGNITUDE: daytime predictors (Tmax)",
+      "mean_R2": 0.8548,
+      "sd_R2": 0.0373
+    },
+    {
+      "arm": "TIMING: nocturnal predictors (AUC)",
+      "mean_R2": 0.7641,
+      "sd_R2": 0.0379
+    },
+    {
+      "arm": "TIMING: daytime predictors (AUC)",
+      "mean_R2": 0.7307,
+      "sd_R2": 0.0458
+    },
+    {
+      "arm": "TIMING: weekend only (AUC)",
+      "mean_R2": 0.6354,
+      "sd_R2": 0.0289
+    }
+  ],
+  "bess": {
+    "n_nights": 229,
+    "design_percentile": 95.0,
+    "usable_energy_mwh": 1225.5,
+    "discharge_power_mw": 606.3,
+    "median_duration_h": 2.0,
+    "installed_energy_mwh": 1547.4,
+    "worst_night_mwh": 2029.7
+  }
+}
